@@ -1,0 +1,63 @@
+{
+  "name": "react-spatial-tv-navigation",
+  "description": "React Spatial Navigation for TV and set-top box Apps",
+  "main": "dist/index.js",
+  "version": "1.0.0",
+  "author": "Satadru Bhattacharjee",
+  "email": "satadru.bhatt@gmail.com",
+  "license": "Apache-2.0",
+  "keywords": [
+    "react",
+    "spatial",
+    "nagigation",
+    "tv",
+    "set-top box",
+    "netflix",
+    "keyboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SatadruBhattacharjee/react-spatial-tv-navigation.git"
+  },
+  "bugs": "https://github.com/SatadruBhattacharjee/react-spatial-tv-navigation.git/issues",
+  "scripts": {
+    "clean:build": "node ./bin/clean.js createdir",
+    "build:html": "node ./bin/buildHtml.js",
+    "prestart": "node ./bin/clean.js",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js --hot --inline --progress",
+    "prebuild": "npm run clean:build && npm run build:html",
+    "build": "export NODE_ENV=production & NODE_ENV=production & webpack -p --config ./config/webpack.config.prod.js --progress",
+    "prepublish": "babel --plugins 'transform-es2015-modules-umd' src --out-dir ./dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "6.7.7",
+    "babel-loader": "6.2.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-1": "6.5.0",
+    "cheerio": "0.20.0",
+    "colors": "1.1.2",
+    "copy-webpack-plugin": "2.1.3",
+    "css-loader": "0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.8.5",
+    "node-sass": "3.7.0",
+    "postcss-loader": "0.8.2",
+    "react-addons-test-utils": "15.5.1",
+    "react-hot-loader": "1.3.1",
+    "rimraf": "2.5.2",
+    "sass-loader": "3.1.2",
+    "style-loader": "0.13.0",
+    "url-loader": "0.5.7",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "autoprefixer": "6.3.6",
+    "lodash": "4.11.1",
+    "react": "15.5.0",
+    "react-dom": "15.5.0"
+  }
+}
